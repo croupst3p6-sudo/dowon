@@ -59,19 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPortfolios('portfolio-grid');
 
 
-    // Floating Card Scroll Logic
-    const floatingCard = document.getElementById('floating-card');
-    const heroSection = document.getElementById('hero');
-    
-    if (floatingCard && heroSection) {
-        window.addEventListener('scroll', () => {
-            // Show card after scrolling past some of the hero section
-            const threshold = heroSection.offsetHeight / 3;
-            if (window.scrollY > threshold) {
-                floatingCard.classList.add('visible');
-            } else {
-                floatingCard.classList.remove('visible');
-            }
-        });
-    }
+
 });

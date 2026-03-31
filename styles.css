@@ -89,7 +89,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/hero.png');
+    background-image: url('images/1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -178,6 +178,8 @@ body {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
 
 /* Sections */
 .section {
@@ -430,43 +432,7 @@ body {
     color: var(--text-light);
 }
 
-/* Floating Card */
-.floating-card {
-    position: fixed;
-    right: 40px;
-    bottom: -400px; /* hidden initially */
-    width: 320px;
-    background: var(--bg-white);
-    border-radius: 20px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    z-index: 999;
-    border: 3px solid var(--primary-blue);
-    overflow: hidden;
-    transition: bottom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
-.floating-card.visible {
-    bottom: 40px;
-}
-
-/* On subpages without a long scroll requirement initially, show the card or based on scroll */
-body:not(:has(#hero)) .floating-card {
-    bottom: 40px;
-}
-
-.card-header {
-    background: var(--primary-blue);
-    color: white;
-    padding: 18px;
-    text-align: center;
-    font-weight: 900;
-    font-size: 1.4rem;
-    letter-spacing: -1px;
-}
-
-.card-body {
-    padding: 25px;
-}
 
 .qualifications {
     margin-bottom: 20px;
@@ -560,14 +526,149 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Premium Footer Business Card */
+.premium-business-card {
+    background: #0f172a;
+    background-image: linear-gradient(145deg, #090e17 0%, #1e293b 100%);
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    border-top: 3px solid #d4af37; /* Gold accent */
+}
+
+.pbc-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.pbc-logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: #f8fafc;
+}
+
+.pbc-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.pbc-badge {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid #d4af37;
+    color: #fef08a; /* Soft gold text */
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.pbc-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.pbc-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pbc-name {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.pbc-phone {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pbc-phone:hover {
+    color: #d4af37;
+}
+
+.pbc-divider {
+    width: 2px;
+    height: 60px;
+    background: rgba(255,255,255,0.15);
+}
+
+/* Footer override to blend with premium card if directly above it */
+.premium-business-card + footer {
+    margin-top: 0;
+    background: #090e17; /* match premium dark bg */
+}
+
+/* Floating Call Button */
+.floating-call-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+.floating-call-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.6);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .floating-card {
-        right: 20px;
-        width: calc(100% - 40px);
+    .pbc-contacts {
+        flex-direction: column;
+        gap: 25px;
     }
-    .floating-card.visible {
-        bottom: 20px;
+    .pbc-divider {
+        width: 100px;
+        height: 2px;
+    }
+    .pbc-phone {
+        font-size: 1.6rem;
+    }
+    .pbc-logo {
+        font-size: 2rem;
+    }
+    .pbc-content {
+        padding: 40px 20px;
+    }
+    .floating-call-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        right: 15px;
+        bottom: 15px;
     }
     .hero-content h2 {
         font-size: 2.5rem;
