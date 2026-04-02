@@ -89,7 +89,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/1.jpg');
+    background-image: url('images/hero.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -112,8 +112,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Changed to neutral dark overlay to keep original image colors while maintaining text legibility */
-    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, rgba(3, 105, 161, 0.8), rgba(14, 165, 233, 0.4));
 }
 
 .hero-content {
@@ -179,8 +178,6 @@ body {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-
 
 /* Sections */
 .section {
@@ -433,7 +430,43 @@ body {
     color: var(--text-light);
 }
 
+/* Floating Card */
+.floating-card {
+    position: fixed;
+    right: 40px;
+    bottom: -400px; /* hidden initially */
+    width: 320px;
+    background: var(--bg-white);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    border: 3px solid var(--primary-blue);
+    overflow: hidden;
+    transition: bottom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+.floating-card.visible {
+    bottom: 40px;
+}
+
+/* On subpages without a long scroll requirement initially, show the card or based on scroll */
+body:not(:has(#hero)) .floating-card {
+    bottom: 40px;
+}
+
+.card-header {
+    background: var(--primary-blue);
+    color: white;
+    padding: 18px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: -1px;
+}
+
+.card-body {
+    padding: 25px;
+}
 
 .qualifications {
     margin-bottom: 20px;
@@ -527,346 +560,20 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Premium Footer Business Card */
-.premium-business-card {
-    background: #0f172a;
-    background-image: linear-gradient(145deg, #090e17 0%, #1e293b 100%);
-    padding: 80px 20px;
-    color: white;
-    text-align: center;
-    border-top: 3px solid #d4af37; /* Gold accent */
-}
-
-.pbc-content {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 50px 30px;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-    backdrop-filter: blur(10px);
-}
-
-.pbc-logo {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-    color: #f8fafc;
-}
-
-.pbc-badges {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.pbc-badge {
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid #d4af37;
-    color: #fef08a; /* Soft gold text */
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.pbc-contacts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.pbc-contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pbc-name {
-    font-size: 1.1rem;
-    color: #94a3b8;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.pbc-phone {
-    font-size: 2rem;
-    font-weight: 900;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.pbc-phone:hover {
-    color: #d4af37;
-}
-
-.pbc-divider {
-    width: 2px;
-    height: 60px;
-    background: rgba(255,255,255,0.15);
-}
-
-/* Footer override to blend with premium card if directly above it */
-.premium-business-card + footer {
-    margin-top: 0;
-    background: #090e17; /* match premium dark bg */
-}
-
-/* Floating Actions */
-.floating-menu-container {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    z-index: 1000;
-}
-
-.floating-actions-row {
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-}
-
-.floating-call-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    gap: 0;
-}
-
-/* Floating Call Menu */
-.floating-call-options {
-    position: absolute;
-    bottom: calc(100% + 15px);
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    white-space: nowrap;
-}
-
-/* Navigation Blog Button */
-.nav-blog-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #03c75a;
-    color: white !important;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.95rem !important;
-    transition: background 0.3s, transform 0.2s;
-    margin-left: 15px;
-    box-shadow: 0 4px 6px -1px rgba(3, 199, 90, 0.3);
-}
-
-.nav-blog-btn:hover {
-    background: #02a148;
-    transform: translateY(-2px);
-    color: white !important;
-}
-
-.nav-blog-btn .blog-n {
-    font-size: 1.2rem;
-    font-weight: 900;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.floating-call-options.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.floating-call-option {
-    background: white;
-    color: var(--primary-blue);
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border: 2px solid var(--primary-blue);
-    transition: background 0.3s, color 0.3s;
-}
-
-.floating-call-option:hover {
-    background: var(--primary-blue);
-    color: white;
-}
-
-.floating-call-btn {
-    border: none;
-    cursor: pointer;
-    padding: 0 25px;
-    height: 65px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-    color: white;
-    border-radius: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
-}
-
-.floating-call-btn:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.6);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-    /* Navbar Mobile Fix */
-    .navbar .container {
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        padding: 12px 15px;
-        gap: 12px;
+    .floating-card {
+        right: 20px;
+        width: calc(100% - 40px);
     }
-    .logo {
-        font-size: 1.5rem;
-    }
-    .navbar nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 15px;
-    }
-    .navbar nav a {
-        margin-left: 0;
-        font-size: 0.95rem;
-    }
-    
-    /* Offset for taller mobile navbar */
-    .hero {
-        margin-top: 90px; 
-    }
-    .page-header {
-        margin-top: 90px;
-        padding: 40px 15px;
-    }
-    .page-header h2 {
-        font-size: 1.8rem;
-        word-break: keep-all;
-    }
-
-    /* Hero Section Mobile Fix */
-    .hero-content {
-        padding: 0 15px;
+    .floating-card.visible {
+        bottom: 20px;
     }
     .hero-content h2 {
-        font-size: 1.7rem;
-        line-height: 1.35;
-        word-break: keep-all;
-        margin-bottom: 15px;
+        font-size: 2.5rem;
     }
-    .hero-content p {
-        font-size: 1rem;
-        line-height: 1.5;
-        word-break: keep-all;
-        margin-bottom: 25px;
-    }
-    .hero-content br {
-        display: none; /* Let text wrap naturally */
-    }
-    .hero-buttons {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        margin-top: 20px !important;
-    }
-    .hero-btn {
-        width: 100%;
-        max-width: 280px;
-        padding: 14px 20px;
-        font-size: 1rem;
-    }
-
-    /* Sections Mobile Fix */
-    .section {
-        padding: 45px 0;
-    }
-    .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-        word-break: keep-all;
-    }
-    .grid {
-        gap: 20px;
-        grid-template-columns: 1fr;
-    }
-
-    /* Premium Business Card Mobile Fix */
-    .pbc-content {
-        padding: 35px 20px;
-    }
-    .pbc-logo {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-    .pbc-badges {
-        gap: 10px;
-    }
-    .pbc-badge {
-        font-size: 0.85rem;
-        padding: 8px 14px;
-        word-break: keep-all;
-    }
-    .pbc-contacts {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .pbc-divider {
-        width: 60px;
-        height: 2px;
-    }
-    .pbc-phone {
-        font-size: 1.5rem;
-    }
-    
-    /* Floating Menu Mobile */
-    .floating-menu-container {
-        right: 15px;
-        bottom: 15px;
-    }
-    .floating-actions-row {
-        gap: 10px;
-    }
-    .floating-call-options {
-        bottom: calc(100% + 10px);
-    }
-    .nav-blog-btn {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-    .floating-call-option {
-        font-size: 0.95rem;
-        padding: 10px 15px;
-    }
-    .floating-call-btn {
-        height: 55px;
-        padding: 0 20px;
-        font-size: 1.1rem;
-        border-radius: 28px;
+    .navbar nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
     }
 }

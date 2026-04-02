@@ -59,21 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPortfolios('portfolio-grid');
 
 
-    // Floating Call Menu Toggle
-    const floatingCallBtn = document.getElementById('floatingCallBtn');
-    const floatingCallOptions = document.getElementById('floatingCallOptions');
+    // Floating Card Scroll Logic
+    const floatingCard = document.getElementById('floating-card');
+    const heroSection = document.getElementById('hero');
     
-    if (floatingCallBtn && floatingCallOptions) {
-        floatingCallBtn.addEventListener('click', () => {
-            floatingCallOptions.classList.toggle('active');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!floatingCallBtn.contains(e.target) && !floatingCallOptions.contains(e.target)) {
-                floatingCallOptions.classList.remove('active');
+    if (floatingCard && heroSection) {
+        window.addEventListener('scroll', () => {
+            // Show card after scrolling past some of the hero section
+            const threshold = heroSection.offsetHeight / 3;
+            if (window.scrollY > threshold) {
+                floatingCard.classList.add('visible');
+            } else {
+                floatingCard.classList.remove('visible');
             }
         });
     }
-
 });
