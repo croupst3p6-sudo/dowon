@@ -1,133 +1,413 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도원시스템 - 시스템 에어컨 수리 및 판매 전문</title>
-    <meta name="description" content="LG, 삼성 시스템에어컨 전문. 수리, 판매, 세척을 책임지는 도원시스템입니다. 최고의 기술력으로 보답하겠습니다.">
-    <meta name="keywords" content="도원시스템, 시스템에어컨, 에어컨수리, 에어컨설치, 에어컨판매, 시스템에어컨수리, 서울에어컨, 일산에어컨">
+    <title>도원시스템 | 시스템에어컨 긴급수리·설치·단종부품 전문 (수도권 당일출장)</title>
+    <meta name="description" content="전·현직 LG, 삼성 서비스센터 출신 엔지니어 직접 방문! 시스템에어컨 콤프레셔, PCB기판, 미세 냉매누설 정밀수리 및 신규설치, 단종부품 보유. 수도권 당일 신속출장.">
+    <meta name="keywords" content="도원시스템, 시스템에어컨수리, 시스템에어컨설치, LG시스템에어컨, 삼성시스템에어컨, 에어컨에러코드, CH21, E464, 콤프레셔수리, PCB기판수리, 에어컨가스충전, 서울에어컨, 경기에어컨, 인천에어컨">
     <meta name="robots" content="index, follow">
-    <!-- 검색 엔진 및 소셜 공유 최적화(OG) 태그 -->
+    
+    <!-- Open Graph (카카오톡, SNS 미리보기) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="도원시스템 - 시스템 에어컨 수리 및 판매 전문">
-    <meta property="og:description" content="LG, 삼성 시스템에어컨 전문. 수리, 판매, 세척을 책임지는 도원시스템입니다. 최고의 기술력으로 보답하겠습니다.">
+    <meta property="og:title" content="도원시스템 | 시스템에어컨 긴급수리·설치 전문">
+    <meta property="og:description" content="전·현직 LG, 삼성 출신 엔지니어 직접 방문! 정확한 진단과 투명한 견적, 수도권 당일 신속출장.">
+    <meta property="og:image" content="images/hero-slides/slide-1.jpg">
     <meta property="og:url" content="https://dowonsystem.com">
-    <meta property="og:site_name" content="도원시스템">
-    <!-- 네이버/구글 사이트 소유확인 코드는 아래에 추가하세요 -->
-    <!-- <meta name="naver-site-verification" content="네이버 서치어드바이저 확인 코드" /> -->
-    <!-- <meta name="google-site-verification" content="구글 서치콘솔 확인 코드" /> -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-</head>
 
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <!-- Header -->
+    <!-- 홈 식별자 (스크립트용) -->
+    <div id="isHomePage" style="display:none;"></div>
+
+    <!-- 1. 상단 실시간 출동 현황 티커 바 -->
+    <aside class="top-ticker">
+        <div class="container">
+            <div class="ticker-status">
+                <span class="status-dot"></span>
+                <span>[실시간] 현재 서울·경기·인천 수도권 전지역 당일 긴급 출동 접수</span>
+            </div>
+            <div class="ticker-links">
+                <span>평일/주말 긴급상담 지원</span>
+                <a href="sms:01038196610?body=[도원시스템문의]" class="ticker-phone-urgent">
+                    🚨 수도권 전지역 긴급출동 접수 중
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 2. 프리미엄 네비게이션 헤더 -->
     <header class="navbar">
         <div class="container">
-            <h1 class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">도원 시스템</a></h1>
-            <nav>
-                <a href="index.html" class="active">홈</a>
-                <a href="about.html">회사소개</a>
-                <a href="products.html">판매상품</a>
-                <a href="portfolio.html">시공사례</a>
-                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn">
-                    <span class="blog-n">N</span> 네이버블로그
+            <div class="logo-wrapper">
+                <a href="index.html" class="brand-logo">
+                    도원<span>시스템</span>
                 </a>
+                <span class="brand-badge">LG/삼성 출신</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">홈</a></li>
+                    <li><a href="products.html" class="nav-link">판매상품/부품</a></li>
+                    <li><a href="portfolio.html" class="nav-link">시공·수리사례</a></li>
+                    <li><a href="about.html" class="nav-link">회사소개</a></li>
+                </ul>
             </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>시스템에어컨 전문수리 설치업체 도원시스템</h2>
-            <p>저희 도원시스템은 전, 현직 LG, 삼성 서비스기사 출신으로 구성된 전문가들이 직접 방문드립니다.<br>서울, 인천, 일산, 파주에 가맹점을 운영중이며 전화주시면 빠르게 방문드리겠습니다.
-            </p>
-
-
-            <div class="hero-buttons" style="margin-top: 30px;">
-                <a href="tel:01038196610" class="hero-btn">📞 010-3819-6610</a>
-                <a href="tel:01028066545" class="hero-btn outline">📞 010-2806-6545</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Preview Sections -->
-    <main class="container">
-        <!-- Products Preview Section -->
-        <section id="preview-products" class="section">
-            <h2 class="section-title">추천 판매상품</h2>
-            <div class="grid" id="product-grid-preview">
-                <!-- 6 Products dynamically inserted via JS -->
-            </div>
-            <div class="center-btn-container">
-                <a href="products.html" class="view-all-btn">상품 전체보기</a>
-            </div>
-        </section>
-
-        <!-- Portfolio Preview Section -->
-        <section id="preview-portfolio" class="section">
-            <h2 class="section-title">최근 시공 및 수리사례</h2>
-            <div class="grid" id="portfolio-grid-preview">
-                <!-- 6 Portfolios dynamically inserted via JS -->
-            </div>
-            <div class="center-btn-container">
-                <a href="portfolio.html" class="view-all-btn">시공사례 전체보기</a>
-            </div>
-        </section>
-    </main>
-
-
-
-    <!-- Premium Footer Business Card (Home Page Only) -->
-    <section class="premium-business-card">
-        <div class="container">
-            <div class="pbc-content">
-                <h2 class="pbc-logo">도원시스템</h2>
-                <div class="pbc-badges">
-                    <span class="pbc-badge">LG/삼성 시스템에어컨 수리기사 출신</span>
-                    <span class="pbc-badge">LG/삼성 시스템에어컨 시공자격 보유</span>
-                </div>
-                <div class="pbc-contacts">
-                    <div class="pbc-contact-item">
-                        <a href="tel:01038196610" class="pbc-phone">010-3819-6610</a>
-                    </div>
-                    <div class="pbc-divider"></div>
-                    <div class="pbc-contact-item">
-                        <a href="tel:01028066545" class="pbc-phone">010-2806-6545</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating Call Menu -->
-    <div class="floating-menu-container">
-        <div class="floating-actions-row">
-            <div class="floating-call-wrapper">
-                <div class="floating-call-options" id="floatingCallOptions">
-                    <a href="tel:01038196610" class="floating-call-option">📞 010-3819-6610</a>
-                    <a href="tel:01028066545" class="floating-call-option">📞 010-2806-6545</a>
-                </div>
-                <button class="floating-call-btn" id="floatingCallBtn" aria-label="상담 전화">
-                    📞 전화상담
+            <div class="nav-cta-box">
+                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn" title="네이버 공식 블로그">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+                    블로그
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+                    ☰
                 </button>
             </div>
         </div>
+    </header>
+
+    <!-- 모바일 전체화면 네비게이션 드로어 -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="mobile-close-btn" id="mobileCloseBtn">✕</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">홈</a></li>
+            <li><a href="products.html" class="mobile-nav-link">판매상품 &amp; 순정부품</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">시공 및 수리사례</a></li>
+            <li><a href="about.html" class="mobile-nav-link">엔지니어 &amp; 회사소개</a></li>
+            <li><a href="https://blog.naver.com/junyplz" target="_blank" class="mobile-nav-link" style="color:#03c75a;">네이버 블로그 바로가기</a></li>
+        </ul>
+        <div class="mobile-nav-phones">
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">신속 출장 직통 문의</p>
+            <a href="tel:01038196610" style="display:block; font-size:1.3rem; font-weight:900; color:var(--accent-gold-light); margin-bottom:6px;">
+                📞 010-3819-6610 (직통)
+            </a>
+            <a href="tel:01028066545" style="display:block; font-size:1.05rem; font-weight:700; color:var(--text-secondary);">
+                📞 010-2806-6545 (기술)
+            </a>
+        </div>
     </div>
 
-    <!-- Footer -->
+    <!-- 3. 메인 히어로 섹션 -->
+    <section class="hero">
+        <!-- 히어로 배경 슬라이드쇼 -->
+        <div class="hero-bg-slideshow" id="heroBgSlideshow" aria-hidden="true">
+            <img src="images/hero-slides/slide-8.jpg" alt="" class="hero-bg-slide active">
+            <img src="images/hero-slides/slide-9.jpg" alt="" class="hero-bg-slide">
+            <img src="images/hero-slides/slide-1.jpg" alt="" class="hero-bg-slide">
+            <img src="images/hero-slides/slide-2.jpg" alt="" class="hero-bg-slide">
+            <img src="images/hero-slides/slide-3.jpg" alt="" class="hero-bg-slide">
+            <img src="images/hero-slides/slide-4.jpg" alt="" class="hero-bg-slide">
+            <img src="images/hero-slides/slide-5.jpg" alt="" class="hero-bg-slide">
+        </div>
+        <div class="hero-key-overlay">
+            <div class="container">
+                <div class="hero-title-rotator" id="heroTitleRotator">
+                    <h1 class="hero-key-title active">
+                        서울, 경기, 인천, 일산, 파주 수도권 <span class="hero-urgent-red">긴급출동</span>
+                    </h1>
+                    <p class="hero-key-title">
+                        삼성, LG 제조사 단종 부품보유 단종제품 당일수리
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide-dots" id="heroSlideDots" aria-label="배경 슬라이드 선택"></div>
+    </section>
+
+    <!-- 타이틀 사진 하단 난수리 전문 & 수리문의 안내 바 -->
+    <section class="hero-sub-strip" aria-label="고객센터 및 난수리 전문 안내">
+        <div class="container hero-sub-inner">
+            <div class="hero-sub-left">
+                <span class="hero-sub-badge">난수리 해결 전문</span>
+                <ul class="hero-sub-list">
+                    <li><strong>PCB</strong> 기판 정밀 수리</li>
+                    <li><strong>콤프레셔 · 누설</strong> 수리</li>
+                </ul>
+            </div>
+            <a href="tel:01038196610" class="hero-sub-contact">
+                <span class="hero-sub-label">고객센터 수리문의</span>
+                <span class="hero-sub-tel">📞 010-3819-6610</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. 시스템에어컨 주요 고장 원인 안내 -->
+    <section class="section fault-reasons-section" id="fault-reasons">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Troubleshooting Guide</span>
+                <h2 class="section-title">시스템에어컨, <span>왜 고장이 날까요?</span></h2>
+                <p class="section-desc">정확한 고장 원인을 알면 불필요한 기기 전체 교체 없이 합리적인 비용으로 완벽하게 복구할 수 있습니다.</p>
+            </div>
+
+            <div class="fault-grid">
+                <!-- 원인 1 -->
+                <div class="fault-card">
+                    <div class="fault-card-top">
+                        <span class="fault-icon">❄️</span>
+                        <span class="fault-num">01</span>
+                    </div>
+                    <h3 class="fault-title">냉매(가스) 미세 누설</h3>
+                    <p class="fault-desc">
+                        배관 노후로 인한 동파이프 부식, 시공 당시 용접 부위의 미세 크랙, 실외기 서비스 밸브 및 플레어 너트 풀림 등으로 냉매가 서서히 빠져나가는 가장 흔한 고장입니다. 원인 해결 없이 가스만 보충하면 몇 주 뒤 다시 같은 증상이 반복됩니다.
+                    </p>
+                    <div class="fault-details">
+                        <div class="fault-symptom">
+                            <strong>주요 증상</strong><br>
+                            • 냉방 가동 시 찬바람이 약해지고 미지근한 바람만 나옴<br>
+                            • 실내 온도가 내려가지 않아 실외기가 쉬지 않고 계속 돌아 전기요금 급증<br>
+                            • 실외기 배관 연결부(서비스 밸브)에 하얀 성애가 끼거나 물방울(결로)이 심함<br>
+                            • 가스를 충전해도 며칠~몇 주 뒤에 다시 냉방이 안 되는 현상 반복
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 원인 2 -->
+                <div class="fault-card">
+                    <div class="fault-card-top">
+                        <span class="fault-icon">⚡</span>
+                        <span class="fault-num">02</span>
+                    </div>
+                    <h3 class="fault-title">인버터 PCB 기판 · 전자소자 손상</h3>
+                    <p class="fault-desc">
+                        여름철 낙뢰 및 건물 내 순간 과전압(서지) 유입, 장마철 실외기 내부 습기 침투와 먼지 누적, 혹은 장시간 고온 가동으로 인해 실외기 메인 보드와 인버터 IPM 모듈의 전원·제어 소자가 타거나 손상됩니다.
+                    </p>
+                    <div class="fault-details">
+                        <div class="fault-symptom">
+                            <strong>주요 증상</strong><br>
+                            • 실내기 램프가 깜빡이거나 리모컨에 에러코드(CH21, CH05, E464 등) 점등<br>
+                            • 리모컨을 눌러도 실내기·실외기 전원이 전혀 들어오지 않거나 반응 없음<br>
+                            • 실외기가 작동하려는 소리가 나다가 몇 초~몇 분 만에 보호 정지됨<br>
+                            • 실외기 제어함 내부에서 타는 냄새가 나거나 휴즈가 반복적으로 단선됨
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 원인 3 -->
+                <div class="fault-card">
+                    <div class="fault-card-top">
+                        <span class="fault-icon">⚙️</span>
+                        <span class="fault-num">03</span>
+                    </div>
+                    <h3 class="fault-title">콤프레셔(압축기) 과열 · 고착</h3>
+                    <p class="fault-desc">
+                        냉매가 부족한 상태에서 무리하게 장시간 운전하거나, 냉동기유(오일) 부족·열화, 실외기 열교환기 오염으로 방열이 안 될 경우 핵심 부품인 인버터 압축기 모터 권선이 절연 파괴되거나 기구부가 고착됩니다.
+                    </p>
+                    <div class="fault-details">
+                        <div class="fault-symptom">
+                            <strong>주요 증상</strong><br>
+                            • 에어컨을 켜자마자 분전함 메인 차단기 또는 누전 차단기가 즉시 떨어짐(트립)<br>
+                            • 실외기에서 '웅~' 하는 심한 진동과 굉음이 나다가 금방 멈춤<br>
+                            • 실외기 팬은 도는데 찬바람이 전혀 나오지 않고 콤프레셔 본체가 매우 뜨거움<br>
+                            • 인버터 과전류·IPM 보호 관련 에러코드가 반복 발생함
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 원인 4 -->
+                <div class="fault-card">
+                    <div class="fault-card-top">
+                        <span class="fault-icon">🌬️</span>
+                        <span class="fault-num">04</span>
+                    </div>
+                    <h3 class="fault-title">실외기 팬모터 마모 · 드레인 배수 막힘</h3>
+                    <p class="fault-desc">
+                        실외기 팬모터 베어링이 마모되거나 통풍이 막히면 고압 상승으로 기기가 보호 정지하며, 실내기 내부 응축수(물)를 빼내는 드레인 펌프 고장이나 배수 호스 슬라임 막힘은 천장 누수의 직접적인 원인이 됩니다.
+                    </p>
+                    <div class="fault-details">
+                        <div class="fault-symptom">
+                            <strong>주요 증상</strong><br>
+                            • 실내기 날개나 천장 틈새에서 물이 뚝뚝 떨어지거나 천장 도배가 젖음<br>
+                            • 실외기 상단·전면 팬이 회전하지 않거나 쇠 긁히는 소리·덜덜거리는 소음 발생<br>
+                            • 처음 10~20분은 시원하다가 실외기 과열로 인해 자동으로 멈춰버림<br>
+                            • 실내기 배수 펌프 이상 경고등 또는 수위 센서 에러코드 점등
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 전문가 점검 강조 안내 배너 -->
+            <div class="fault-warning-box">
+                <div class="fault-warning-content">
+                    <div class="fault-warning-title">
+                        ⚠️ 위와 같은 증상이 나타났다면 즉시 전문가의 점검이 필요합니다.
+                    </div>
+                    <ol class="fault-warning-list">
+                        <li><strong>1. 냉매 부족 상태로 계속 가동 시 → 콤프레셔(압축기) 소손</strong><br>냉매가 부족하면 압축기 냉각이 되지 않아 과열 및 기구부 고착으로 이어지며, 단순 누설 수리가 고가의 압축기 교체로 커집니다.</li>
+                        <li><strong>2. 차단기·전원을 임의로 반복 재가동 시 → PCB 기판 연쇄 파손</strong><br>내부 과전류나 쇼트 상태에서 차단기를 계속 다시 올리면, 정상인 인버터·메인보드 소자까지 2차로 타버릴 수 있습니다.</li>
+                        <li><strong>3. 실외기 팬 이상·소음을 방치할 시 → 고압 상승 및 배관 계통 손상</strong><br>실외기 열이 식지 않아 냉매 압력이 비정상적으로 치솟으면서 배관 크랙이나 안전장치 손상을 유발합니다.</li>
+                        <li><strong>4. 실내기 물 떨어짐(드레인 막힘) 방치 시 → 천장 훼손 및 누전 위험</strong><br>응축수가 계속 넘치면 천장 마감재·도배가 손상될 뿐만 아니라, 실내기 제어 기판 침수 및 전기 누전 사고로 이어질 수 있습니다.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. 최근 시공 및 수리 사례 (Portfolio) -->
+    <section class="section" style="background:var(--bg-deep);" id="portfolio-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag cyan">Field Cases</span>
+                <h2 class="section-title">도원시스템의 <span>확실한 기술력 차이</span></h2>
+                <p class="section-title" style="margin-top:6px; margin-bottom:12px;">생생한 <span style="color:#2563eb;">현장 시공후기</span></p>
+                <p class="section-desc">실제 도원시스템 엔지니어가 출동하여 해결한 현장 일지입니다.</p>
+            </div>
+
+            <!-- 시공사례 그리드 (텍스트 없음, 각 카드 안 사진 자동 슬라이드 + 클릭 시 상세 갤러리) -->
+            <div class="portfolio-grid" id="casePortfolioGrid"></div>
+            <p class="pf-slideshow-hint">📸 사진을 클릭하시면 현장 상세 사진 여러 장을 크게 보실 수 있습니다.</p>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="portfolio.html" class="btn-hero-secondary" style="display:inline-flex;">
+                    더 많은 시공·수리사례 보기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 핵심 3대 서비스 쇼케이스 -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Services</span>
+                <h2 class="section-title">도원시스템의 <span>3대 전문 솔루션</span></h2>
+                <p class="section-desc">수리부터 설치, 부품 공급까지 시스템에어컨의 전 과정을 원스톱으로 책임집니다.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- 서비스 1 -->
+                <div class="service-card">
+                    <div class="service-card-icon">⚡</div>
+                    <h3 class="service-card-title">당일 긴급 출장 수리</h3>
+                    <p class="service-card-desc">
+                        LG, 삼성 서비스센터 출신 기사가 첨단 진단 장비를 지참하여 당일 신속 방문합니다. 불필요한 부품 교체 없는 정직한 진단을 약속합니다.
+                    </p>
+                    <ul class="service-features-list">
+                        <li>인버터 콤프레셔 교체 및 오일 교환</li>
+                        <li>단종 실외기/실내기 PCB 메인보드 수리</li>
+                        <li>배관 미세 누설 탐지 및 고압 질소 테스트</li>
+                        <li>실외기 고출력 BLDC 팬모터 소음 해결</li>
+                    </ul>
+                    <a href="tel:01038196610" class="service-card-link">긴급출장 신청하기 →</a>
+                </div>
+
+                <!-- 서비스 2 -->
+                <div class="service-card cyan">
+                    <div class="service-card-icon">🏢</div>
+                    <h3 class="service-card-title">신규 설치 &amp; 교체 시공</h3>
+                    <p class="service-card-desc">
+                        아파트 입주 올인원 시공부터 상가, 대형 카페, 오피스 맞춤 공조 설계까지 감각적인 인테리어 조화와 하자 없는 책임 시공을 제공합니다.
+                    </p>
+                    <ul class="service-features-list">
+                        <li>아파트 천장 타공 최소화 무풍 시공</li>
+                        <li>상가 노출천장 분체도장 프리미엄 배관</li>
+                        <li>원형 360, 4Way, 덕트형 최적 풍량 설계</li>
+                        <li>시공 후 배관 누수 2년 무상 보증</li>
+                    </ul>
+                    <a href="portfolio.html" class="service-card-link" style="color:var(--accent-cyan);">시공사례 둘러보기 →</a>
+                </div>
+
+                <!-- 서비스 3 -->
+                <div class="service-card">
+                    <div class="service-card-icon">⚙️</div>
+                    <h3 class="service-card-title">중고기기 &amp; 순정부품 공급</h3>
+                    <p class="service-card-desc">
+                        제조사에서도 구하기 힘든 단종 실외기, 리퍼 실내기 및 희귀 PCB 기판을 직거래로 공급하여 막대한 교체 비용을 획기적으로 줄여드립니다.
+                    </p>
+                    <ul class="service-features-list">
+                        <li>LG Multi V / 삼성 DVM 단종 실외기 보유</li>
+                        <li>분해 살균 세척 완료된 A급 중고 실내기</li>
+                        <li>순정 인버터 IPM 보드 및 콤프레셔</li>
+                        <li>도원 품질 보증 6개월~1년 제공</li>
+                    </ul>
+                    <a href="products.html" class="service-card-link">제품 카탈로그 확인 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. 자주 묻는 질문 (FAQ Accordion) -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">자주 묻는 <span>질문과 답변</span></h2>
+                <p class="section-desc">서비스 접수 전 궁금하신 사항을 미리 확인해 보세요.</p>
+            </div>
+
+            <div class="faq-list" id="faqListContainer"></div>
+        </div>
+    </section>
+
+    <!-- 시공·수리 사진 갤러리 모달 (Lightbox) -->
+    <div class="pf-modal-overlay" id="pfGalleryModal" aria-hidden="true">
+        <div class="pf-modal-dialog">
+            <button type="button" class="pf-modal-close" id="pfModalClose" aria-label="닫기">✕</button>
+            <div class="pf-modal-stage">
+                <button type="button" class="pf-modal-arrow prev" id="pfModalPrev" aria-label="이전">❮</button>
+                <img src="" alt="현장 상세 사진" id="pfModalImg" class="pf-modal-img">
+                <button type="button" class="pf-modal-arrow next" id="pfModalNext" aria-label="다음">❯</button>
+            </div>
+            <div class="pf-modal-counter" id="pfModalCounter">1 / 1</div>
+            <div class="pf-modal-thumbs" id="pfModalThumbs"></div>
+        </div>
+    </div>
+
+    <!-- 13. 푸터 영역 -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 도원시스템. All rights reserved.</p>
+            <div class="footer-biz-wrap">
+                <div class="footer-biz-info">
+                    <p><strong>회사명 :</strong> 도원시스템</p>
+                    <p><strong>사업자등록번호 :</strong> 265-12-02821</p>
+                    <p><strong>주소 :</strong> 경기도 고양시 일산서구 송포로 447번길 107-28(가좌동)</p>
+                    <p><strong>전화번호 :</strong> <a href="tel:01038196610">010-3819-6610</a></p>
+                    <p><strong>E-mail :</strong> <a href="mailto:chlaud9411@naver.com">chlaud9411@naver.com</a></p>
+                    <p><strong>영업시간 :</strong> 08:00 ~ 21:00 (야간 긴급출동 주말 긴급접수 가능)</p>
+                </div>
+
+                <div class="footer-map-card" aria-label="출장가능지역 지도">
+                    <div class="footer-map-header">
+                        <span class="footer-map-title">출장가능지역</span>
+                        <span class="footer-map-badge">전수도권 출장가능</span>
+                    </div>
+                    <img src="images/footer-map.jpg" alt="서울 인천 경기 전수도권 출장가능지역 지도" class="footer-real-map-img" loading="lazy">
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- 14. 모바일 하단 고정 퀵 액션 독 (Floating Action Bar) -->
+    <aside class="mobile-bottom-bar" aria-label="모바일 하단 빠른 메뉴">
+        <a href="tel:01038196610" class="mb-btn urgent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>긴급전화</span>
+        </a>
+        <a href="sms:01038196610?body=[도원시스템문의]" class="mb-btn gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>문자상담</span>
+        </a>
+        <a href="https://blog.naver.com/junyplz" target="_blank" class="mb-btn" style="color:#03c75a;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+            <span>블로그</span>
+        </a>
+    </aside>
+
+    <!-- 화면 오른쪽 스크롤 고정 전화하기 버튼 (페이지 스크롤 항상 유지) -->
+    <aside class="floating-call-dock" id="floatingCallDock">
+        <a href="tel:01038196610" class="floating-call-btn" aria-label="전화하기">
+            <span class="call-pulse-wave"></span>
+            <svg viewBox="0 0 24 24" class="call-icon" fill="currentColor">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span class="call-label">전화하기</span>
+        </a>
+    </aside>
+
+    <!-- 스크립트 연결 -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

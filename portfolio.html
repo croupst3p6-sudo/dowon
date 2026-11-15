@@ -3,80 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시공사례 - 도원시스템</title>
-    <meta name="description" content="도원시스템의 시스템에어컨 시공 및 수리 사례입니다. 투명하고 전문적인 작업 내역을 확인해보세요.">
-    <meta name="keywords" content="에어컨시공사례, 에어컨수리후기, 시스템에어컨설치">
+    <title>시공 &amp; 수리사례 | 도원시스템 - 현장 작업 일지</title>
+    <meta name="description" content="LG 멀티V 콤프레셔 교체, 삼성 DVM 단종 메인보드 수리, 대형 카페 360 원형에어컨 신규설치, 아파트 매립배관 미세누설 탐지 등 생생한 현장 시공사례입니다.">
+    <meta name="keywords" content="에어컨수리사례, 시스템에어컨시공, 콤프교체, 에어컨기판수리, 매립배관누설, 도원시스템블로그">
     <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="시공사례 - 도원시스템">
-    <meta property="og:description" content="도원시스템의 시스템에어컨 시공 및 수리 사례입니다. 투명하고 전문적인 작업 내역을 확인해보세요.">
+
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- 상단 티커 바 -->
+    <aside class="top-ticker">
+        <div class="container">
+            <div class="ticker-status">
+                <span class="status-dot"></span>
+                <span>[시공 현장] 매주 최신 수리 일지가 네이버 공식 블로그에 실시간 업데이트됩니다</span>
+            </div>
+            <div class="ticker-links">
+                <a href="sms:01038196610?body=[도원시스템문의]" class="ticker-phone-urgent">
+                    🚨 수도권 전지역 긴급출동 접수 중
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 프리미엄 네비게이션 헤더 -->
     <header class="navbar">
         <div class="container">
-            <h1 class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">도원 시스템</a></h1>
-            <nav>
-                <a href="index.html">홈</a>
-                <a href="about.html">회사소개</a>
-                <a href="products.html">판매상품</a>
-                <a href="portfolio.html" class="active">시공사례</a>
-                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn">
-                    <span class="blog-n">N</span> 네이버블로그
+            <div class="logo-wrapper">
+                <a href="index.html" class="brand-logo">
+                    도원<span>시스템</span>
                 </a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="container">
-            <h2>시공사례 및 갤러리</h2>
-            <p>도원시스템 전문가가 직접 시공하고 수리한 투명한 작업 내역입니다.</p>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="container">
-        <section class="section">
-            <div class="grid" id="portfolio-grid">
-                <!-- Portfolio items dynamically inserted via JS -->
+                <span class="brand-badge">LG/삼성 출신</span>
             </div>
-        </section>
-    </main>
 
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">홈</a></li>
+                    <li><a href="products.html" class="nav-link">판매상품/부품</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">시공·수리사례</a></li>
+                    <li><a href="about.html" class="nav-link">회사소개</a></li>
+                </ul>
+            </nav>
 
-
-    <!-- Floating Call Menu -->
-    <div class="floating-menu-container">
-        <div class="floating-actions-row">
-            <div class="floating-call-wrapper">
-                <div class="floating-call-options" id="floatingCallOptions">
-                    <a href="tel:01028066545" class="floating-call-option">📞 010-2806-6545</a>
-                    <a href="tel:01038196610" class="floating-call-option">📞 010-3819-6610</a>
-                </div>
-                <button class="floating-call-btn" id="floatingCallBtn" aria-label="상담 전화">
-                    📞 전화상담
+            <div class="nav-cta-box">
+                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn" title="네이버 공식 블로그">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+                    블로그
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+                    ☰
                 </button>
             </div>
         </div>
+    </header>
+
+    <!-- 모바일 드로어 -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="mobile-close-btn" id="mobileCloseBtn">✕</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">홈</a></li>
+            <li><a href="products.html" class="mobile-nav-link">판매상품 &amp; 순정부품</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">시공 및 수리사례</a></li>
+            <li><a href="about.html" class="mobile-nav-link">엔지니어 &amp; 회사소개</a></li>
+        </ul>
+        <div class="mobile-nav-phones">
+            <a href="tel:01038196610" style="display:block; font-size:1.3rem; font-weight:900; color:var(--accent-gold-light); margin-bottom:6px;">
+                📞 010-3819-6610 (직통)
+            </a>
+            <a href="tel:01028066545" style="display:block; font-size:1.05rem; font-weight:700; color:var(--text-secondary);">
+                📞 010-2806-6545 (기술)
+            </a>
+        </div>
     </div>
 
-    <!-- Footer -->
+    <!-- 상단 배너 -->
+    <section class="section subpage-hero">
+        <div class="container" style="text-align:center; max-width:800px;">
+            <span class="section-tag cyan">Engineering Portfolio</span>
+            <h1 class="section-title">말보다 기술력으로 증명하는 <span>시공·수리 일지</span></h1>
+            <p class="section-desc">
+                서울·인천·일산·파주 전역에서 실제로 진행된 콤프레셔 교체, 단종 PCB 회로 복구,<br>
+                미세 냉매 누설 탐지 및 상업공간 맞춤 설계 설치 현장 기록입니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- 시공사례 메인 섹션 -->
+    <main class="section">
+        <div class="container">
+            <!-- 탭 버튼 -->
+            <div class="catalog-tabs">
+                <button type="button" class="catalog-tab-btn portfolio-tab-btn active" data-cat="all">전체 현장 사례</button>
+                <button type="button" class="catalog-tab-btn portfolio-tab-btn" data-cat="comp">콤프레셔·모터 수리</button>
+                <button type="button" class="catalog-tab-btn portfolio-tab-btn" data-cat="pcb">PCB 기판·통신 수리</button>
+                <button type="button" class="catalog-tab-btn portfolio-tab-btn" data-cat="leak">미세 냉매누설 탐지</button>
+            </div>
+
+            <!-- 시공사례 그리드 (script.js에서 동적 렌더링) -->
+            <div class="portfolio-grid" id="casePortfolioGrid"></div>
+        </div>
+    </main>
+
+    <!-- 고객 리얼 후기 (Reviews) -->
+    <section class="section" style="border-top:1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reviews</span>
+                <h2 class="section-title">고객이 인정하는 <span>도원시스템 후기</span></h2>
+                <p class="section-desc">직접 서비스를 받아보신 고객님들의 솔직한 평가입니다.</p>
+            </div>
+
+            <div class="reviews-grid" id="reviewsContainer"></div>
+        </div>
+    </section>
+
+    <!-- 네이버 블로그 상세 안내 배너 -->
+    <section class="section" style="background:var(--bg-deep); border-top:1px solid var(--border-light);">
+        <div class="container" style="max-width:860px; text-align:center;">
+            <span class="section-tag" style="color:#03C75A; background:rgba(3, 199, 90, 0.1); border-color:rgba(3, 199, 90, 0.3);">
+                Official Naver Blog
+            </span>
+            <h2 class="section-title" style="font-size:2rem;">더 자세한 수리 과정과 사진이 궁금하신가요?</h2>
+            <p class="section-desc" style="margin-bottom:26px;">
+                도원시스템 공식 네이버 블로그에 방문하시면 각 기종별 상세 분해 과정, 질소 기밀 압력 게이지 수치,<br>
+                고객 인터뷰 및 실시간 출동 후기가 생생하게 포스팅되어 있습니다.
+            </p>
+            <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn" style="padding:14px 28px; font-size:1.05rem;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+                    도원시스템 네이버 블로그 바로가기
+                </a>
+                <a href="tel:01038196610" class="btn-hero-primary" style="padding:14px 24px; font-size:1rem;">
+                    🚨 실시간 출장 접수: 010-3819-6610
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 도원시스템. All rights reserved.</p>
+            <div class="footer-biz-wrap">
+                <div class="footer-biz-info">
+                    <p><strong>회사명 :</strong> 도원시스템</p>
+                    <p><strong>사업자등록번호 :</strong> 265-12-02821</p>
+                    <p><strong>주소 :</strong> 경기도 고양시 일산서구 송포로 447번길 107-28(가좌동)</p>
+                    <p><strong>전화번호 :</strong> <a href="tel:01038196610">010-3819-6610</a></p>
+                    <p><strong>E-mail :</strong> <a href="mailto:chlaud9411@naver.com">chlaud9411@naver.com</a></p>
+                    <p><strong>영업시간 :</strong> 08:00 ~ 21:00 (야간 긴급출동 주말 긴급접수 가능)</p>
+                </div>
+
+                <div class="footer-map-card" aria-label="출장가능지역 지도">
+                    <div class="footer-map-header">
+                        <span class="footer-map-title">출장가능지역</span>
+                        <span class="footer-map-badge">전수도권 출장가능</span>
+                    </div>
+                    <img src="images/footer-map.jpg" alt="서울 인천 경기 전수도권 출장가능지역 지도" class="footer-real-map-img" loading="lazy">
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- 모바일 바 -->
+    <aside class="mobile-bottom-bar">
+        <a href="tel:01038196610" class="mb-btn urgent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>긴급전화</span>
+        </a>
+        <a href="sms:01038196610?body=[도원시스템시공문의]" class="mb-btn gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>문자상담</span>
+        </a>
+        <a href="https://blog.naver.com/junyplz" target="_blank" class="mb-btn" style="color:#03c75a;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+            <span>블로그</span>
+        </a>
+    </aside>
+
+    <!-- 화면 오른쪽 스크롤 고정 전화하기 버튼 -->
+    <aside class="floating-call-dock" id="floatingCallDock">
+        <a href="tel:01038196610" class="floating-call-btn" aria-label="전화하기">
+            <span class="call-pulse-wave"></span>
+            <svg viewBox="0 0 24 24" class="call-icon" fill="currentColor">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span class="call-label">전화하기</span>
+        </a>
+    </aside>
+
     <script src="data.js"></script>
     <script src="script.js"></script>
-    
-    <!-- MR Script Ver 2.0 -->
-    <script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=tiwim" charset="UTF-8"></script>
-    <!-- MR Script END Ver 2.0 -->
-        
 </body>
 </html>
