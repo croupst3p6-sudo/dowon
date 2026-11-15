@@ -3,114 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회사소개 - 도원시스템</title>
-    <meta name="description" content="도원시스템 회사소개입니다. LG, 삼성 시스템에어컨 서비스 기사로 근무하며 쌓아온 최고의 기술력을 고객님들께 제공합니다.">
-    <meta name="keywords" content="도원시스템 소개, 시스템에어컨, 에어컨수리, 에어컨전문업체">
+    <title>회사소개 | 도원시스템 - LG·삼성 출신 전문 엔지니어링</title>
+    <meta name="description" content="도원시스템 회사소개. 전·현직 LG, 삼성 서비스센터 출신 엔지니어들이 직접 방문하는 시스템에어컨 정밀 수리, 신규 시공, 공조 설계 전문수리기사입니다.">
+    <meta name="keywords" content="도원시스템 소개, 시스템에어컨 전문업체, LG서비스센터출신, 삼성서비스센터출신, 에어컨엔지니어">
     <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="회사소개 - 도원시스템">
-    <meta property="og:description" content="도원시스템 회사소개입니다. LG, 삼성 시스템에어컨 서비스 기사로 근무하며 쌓아온 최고의 기술력으로 보답하겠습니다.">
+    
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- 1. 상단 티커 바 -->
+    <aside class="top-ticker">
+        <div class="container">
+            <div class="ticker-status">
+                <span class="status-dot"></span>
+                <span>[실시간] 수도권 전지역 당일 긴급 출동 및 견적 상담 접수 중</span>
+            </div>
+            <div class="ticker-links">
+                <a href="sms:01038196610?body=[도원시스템문의]" class="ticker-phone-urgent">
+                    🚨 수도권 전지역 긴급출동 접수 중
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 2. 프리미엄 네비게이션 헤더 -->
     <header class="navbar">
         <div class="container">
-            <h1 class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">도원 시스템</a></h1>
-            <nav>
-                <a href="index.html">홈</a>
-                <a href="about.html" class="active">회사소개</a>
-                <a href="products.html">판매상품</a>
-                <a href="portfolio.html">시공사례</a>
-                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn">
-                    <span class="blog-n">N</span> 네이버블로그
+            <div class="logo-wrapper">
+                <a href="index.html" class="brand-logo">
+                    도원<span>시스템</span>
                 </a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="container">
-            <h2>회사소개</h2>
-            <p>다년간의 서비스 마인드와 탄탄한 기술력, 도원시스템이 약속합니다.</p>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="container">
-        <section class="section about-section">
-            <div class="about-flex">
-                <div class="about-image-wrapper">
-                    <img src="images/about.png" alt="도원시스템 서비스 출동" class="about-image">
-                </div>
-                <div class="about-text-wrapper">
-                    <h3 class="about-title">"기본에 충실한 기술, 정직을 더한 서비스"</h3>
-                    <p class="about-desc">
-                        안녕하세요, 시스템 에어컨 전문 업체 <strong>도원시스템</strong>입니다.<br><br>
-                        도원시스템은 LG, 삼성 시스템 에어컨 서비스 기사로 다년간 근무하며 쌓아온 대기업 수준의 기술력과 서비스 마인드를 고객님들께 거품 없는 투명한 가격으로 제공하고자 설립되었습니다.<br><br>
-                        단순한 에어컨 판매나 수리를 넘어, 공간의 쾌적함을 책임진다는 사명감으로 임하고 있습니다. 시공부터 유지보수, 완전 분해 세척까지 한 번의 인연을 바탕으로 평생 책임지는 서비스 파트너가 되겠습니다.
-                    </p>
-                    
-                    <div class="about-credentials">
-                        <div class="cred-item">
-                            <div class="cred-icon">📜</div>
-                            <div class="cred-info">
-                                <h4>국가공인/제조사 자격</h4>
-                                <p>LG & 삼성 시스템에어컨 공식 시공자격 보유</p>
-                            </div>
-                        </div>
-                        <div class="cred-item">
-                            <div class="cred-icon">👨‍🔧</div>
-                            <div class="cred-info">
-                                <h4>서비스기사 출신</h4>
-                                <p>브랜드 A/S 센터 출신의 검증된 엔지니어 직접 방문</p>
-                            </div>
-                        </div>
-                        <div class="cred-item">
-                            <div class="cred-icon">💧</div>
-                            <div class="cred-info">
-                                <h4>정직한 견적</h4>
-                                <p>과잉 수리 없는 투명하고 체계적인 견적 및 A/S</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <span class="brand-badge">LG/삼성 출신</span>
             </div>
-        </section>
-    </main>
 
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">홈</a></li>
+                    <li><a href="products.html" class="nav-link">판매상품/부품</a></li>
+                    <li><a href="portfolio.html" class="nav-link">시공·수리사례</a></li>
+                    <li><a href="about.html" class="nav-link active">회사소개</a></li>
+                </ul>
+            </nav>
 
-
-    <!-- Floating Call Menu -->
-    <div class="floating-menu-container">
-        <div class="floating-actions-row">
-            <div class="floating-call-wrapper">
-                <div class="floating-call-options" id="floatingCallOptions">
-                    <a href="tel:01028066545" class="floating-call-option">📞 010-2806-6545</a>
-                    <a href="tel:01038196610" class="floating-call-option">📞 010-3819-6610</a>
-                </div>
-                <button class="floating-call-btn" id="floatingCallBtn" aria-label="상담 전화">
-                    📞 전화상담
+            <div class="nav-cta-box">
+                <a href="https://blog.naver.com/junyplz" target="_blank" class="nav-blog-btn" title="네이버 공식 블로그">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+                    블로그
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+                    ☰
                 </button>
             </div>
         </div>
+    </header>
+
+    <!-- 모바일 드로어 -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="mobile-close-btn" id="mobileCloseBtn">✕</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">홈</a></li>
+            <li><a href="products.html" class="mobile-nav-link">판매상품 &amp; 순정부품</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">시공 및 수리사례</a></li>
+            <li><a href="about.html" class="mobile-nav-link">엔지니어 &amp; 회사소개</a></li>
+        </ul>
+        <div class="mobile-nav-phones">
+            <a href="tel:01038196610" style="display:block; font-size:1.3rem; font-weight:900; color:var(--accent-gold-light); margin-bottom:6px;">
+                📞 010-3819-6610 (직통)
+            </a>
+            <a href="tel:01028066545" style="display:block; font-size:1.05rem; font-weight:700; color:var(--text-secondary);">
+                📞 010-2806-6545 (기술)
+            </a>
+        </div>
     </div>
 
-    <!-- Footer -->
+    <!-- 회사소개 상단 히어로 -->
+    <section class="section subpage-hero">
+        <div class="container" style="text-align:center; max-width:800px;">
+            <span class="section-tag">About Dowon Systems</span>
+            <h1 class="section-title">기본에 충실한 기술력, <span>정직을 더한 엔지니어링</span></h1>
+            <p class="section-desc">
+                도원시스템은 LG, 삼성 시스템에어컨 공식 서비스센터 출신 베테랑 엔지니어들이 직접 책임지는 냉난방 공조 전문수리기사입니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- 엔지니어 인사말 및 철학 섹션 -->
+    <section class="section">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:40px; align-items:center;">
+                <div style="border-radius:20px; overflow:hidden; border:1px solid var(--border-light); box-shadow:var(--shadow-lg);">
+                    <img src="images/company-about.jpeg" alt="도원시스템 엔지니어링 현장" style="width:100%; height:auto; object-fit:cover;">
+                </div>
+                <div>
+                    <span class="section-tag cyan">Engineering Philosophy</span>
+                    <h2 style="font-size:2rem; font-weight:800; color:var(--text-main); margin-bottom:16px;">
+                        "단순한 기계 수리가 아닌,<br><span style="color:var(--accent-gold-light);">고객의 공간 가치와 쾌적함</span>을 지킵니다"
+                    </h2>
+                    <p style="font-size:1rem; color:var(--text-secondary); line-height:1.8; margin-bottom:20px;">
+                        시스템에어컨은 일반 가전제품과 달리 고난도의 냉매 배관 설계, 고전압 인버터 회로, 정밀 통신 프로토콜이 결합된 복합 공조 설비입니다. 
+                        원인을 정확히 모른 채 단순히 가스를 충전하거나 멀쩡한 부품을 통째로 교체하는 일은 고객님께 불필요한 비용 부담만을 안겨줍니다.
+                    </p>
+                    <p style="font-size:1rem; color:var(--text-secondary); line-height:1.8; margin-bottom:28px;">
+                        도원시스템은 제조사 서비스센터에서 수천 번의 현장 고장을 수리하며 축적한 독보적인 노하우로 
+                        <strong>단종된 모델의 난수리부터 신규 건물의 에너지 효율 극대화 시공</strong>까지 투명한 견적과 정직한 땀방울로 보답하겠습니다.
+                    </p>
+                    <div style="border-left:3px solid var(--accent-gold); padding-left:16px;">
+                        <span style="font-size:1.1rem; font-weight:800; color:var(--text-main);">도원시스템 전문수리기사 일동</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4대 핵심 역량 카드 -->
+    <section class="section" style="background:var(--bg-deep); border-top:1px solid var(--border-light); border-bottom:1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Competence</span>
+                <h2 class="section-title">도원시스템을 <span>선택해야 하는 4가지 이유</span></h2>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+                <div class="service-card">
+                    <div class="service-card-icon">📜</div>
+                    <h3 class="service-card-title" style="font-size:1.2rem;">제조사 공식 자격</h3>
+                    <p class="service-card-desc">
+                        LG전자, 삼성전자 시스템에어컨 공식 설치 및 수리 엔지니어 자격을 보유한 공인 기술자가 직접 책임 시공합니다.
+                    </p>
+                </div>
+                <div class="service-card cyan">
+                    <div class="service-card-icon">🔬</div>
+                    <h3 class="service-card-title" style="font-size:1.2rem;">정밀 진단 장비</h3>
+                    <p class="service-card-desc">
+                        디지털 매니폴드 게이지, 전자식 미세 냉매 탐지기, 고압 질소 가압 기밀 테스터로 오차 없는 과학적 진단을 수행합니다.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-icon">📦</div>
+                    <h3 class="service-card-title" style="font-size:1.2rem;">단종 부품 직보유</h3>
+                    <p class="service-card-desc">
+                        제조사 본사에서 부품 단종 판정을 받은 구형 Multi V, DVM 기종의 순정 PCB 보드와 콤프레셔를 다량 확보하고 있습니다.
+                    </p>
+                </div>
+                <div class="service-card cyan">
+                    <div class="service-card-icon">🛡️</div>
+                    <h3 class="service-card-title" style="font-size:1.2rem;">철저한 사후 보증</h3>
+                    <p class="service-card-desc">
+                        수리 부품에 대해 최대 1년 무상 보증, 신규 설치 공사의 경우 2년 배관 누수 무상 품질 보증서를 정식 발급해 드립니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서비스 제공 지역 안내 -->
+    <section class="section">
+        <div class="container" style="max-width:900px; text-align:center;">
+            <span class="section-tag">Service Coverage</span>
+            <h2 class="section-title">수도권 <span>전지역 당일 신속 방문</span></h2>
+            <p class="section-desc" style="margin-bottom:30px;">
+                도원시스템은 서울 본점 및 인천, 일산, 파주, 김포 거점 네트워크를 운영하여 고객님의 긴급 호출 시 가장 인접한 엔지니어가 즉시 출동합니다.
+            </p>
+
+            <div style="background:var(--bg-surface); border:1px solid var(--border-gold); border-radius:18px; padding:30px; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; text-align:left;">
+                <div>
+                    <h4 style="color:var(--accent-gold-light); font-size:1.05rem; font-weight:800; margin-bottom:8px;">📍 서울특별시 전지역</h4>
+                    <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+                        강남구, 서초구, 마포구, 종로구, 영등포구, 용산구, 송파구, 중구 등 서울 25개 구 전역
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color:var(--accent-cyan); font-size:1.05rem; font-weight:800; margin-bottom:8px;">📍 고양·일산·파주·김포</h4>
+                    <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+                        일산동구, 일산서구, 덕양구, 파주 운정신도시, 김포 한강신도시 및 인근 상가·산업단지
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color:var(--accent-gold-light); font-size:1.05rem; font-weight:800; margin-bottom:8px;">📍 인천 및 부천·광명</h4>
+                    <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+                        송도국제도시, 청라, 부평, 남동공단, 부천 상동/중동 및 광명 일대
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 하단 CTA 배너 -->
+    <section class="bottom-cta-section">
+        <div class="container">
+            <h2 class="bottom-cta-title">어떤 난수리 현장도 해결해 드립니다.</h2>
+            <p class="bottom-cta-desc">
+                전문 엔지니어의 정밀 진단이 필요하시다면 지금 바로 도원시스템으로 전화 주세요.
+            </p>
+            <div class="bottom-cta-buttons">
+                <a href="tel:01038196610" class="btn-hero-primary">
+                    🚨 010-3819-6610 직통 전화 연결
+                </a>
+                <a href="sms:01038196610?body=[도원시스템문의]" class="btn-hero-secondary">
+                    💬 통화 부재 시 문자 문의
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 도원시스템. All rights reserved.</p>
+            <div class="footer-biz-wrap">
+                <div class="footer-biz-info">
+                    <p><strong>회사명 :</strong> 도원시스템</p>
+                    <p><strong>사업자등록번호 :</strong> 265-12-02821</p>
+                    <p><strong>주소 :</strong> 경기도 고양시 일산서구 송포로 447번길 107-28(가좌동)</p>
+                    <p><strong>전화번호 :</strong> <a href="tel:01038196610">010-3819-6610</a></p>
+                    <p><strong>E-mail :</strong> <a href="mailto:chlaud9411@naver.com">chlaud9411@naver.com</a></p>
+                    <p><strong>영업시간 :</strong> 08:00 ~ 21:00 (야간 긴급출동 주말 긴급접수 가능)</p>
+                </div>
+
+                <div class="footer-map-card" aria-label="출장가능지역 지도">
+                    <div class="footer-map-header">
+                        <span class="footer-map-title">출장가능지역</span>
+                        <span class="footer-map-badge">전수도권 출장가능</span>
+                    </div>
+                    <img src="images/footer-map.jpg" alt="서울 인천 경기 전수도권 출장가능지역 지도" class="footer-real-map-img" loading="lazy">
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- 모바일 바 -->
+    <aside class="mobile-bottom-bar">
+        <a href="tel:01038196610" class="mb-btn urgent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>긴급전화</span>
+        </a>
+        <a href="sms:01038196610?body=[도원시스템문의]" class="mb-btn gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>문자상담</span>
+        </a>
+        <a href="https://blog.naver.com/junyplz" target="_blank" class="mb-btn" style="color:#03c75a;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#03C75A"><rect width="24" height="24" rx="4" fill="#03C75A"/><text x="6" y="17" font-family="'Arial', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">N</text></svg>
+            <span>블로그</span>
+        </a>
+    </aside>
+
+    <!-- 화면 오른쪽 스크롤 고정 전화하기 버튼 -->
+    <aside class="floating-call-dock" id="floatingCallDock">
+        <a href="tel:01038196610" class="floating-call-btn" aria-label="전화하기">
+            <span class="call-pulse-wave"></span>
+            <svg viewBox="0 0 24 24" class="call-icon" fill="currentColor">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span class="call-label">전화하기</span>
+        </a>
+    </aside>
+
     <script src="data.js"></script>
     <script src="script.js"></script>
-    
-    <!-- MR Script Ver 2.0 -->
-    <script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=tiwim" charset="UTF-8"></script>
-    <!-- MR Script END Ver 2.0 -->
-        
 </body>
 </html>
